@@ -11,7 +11,7 @@ export const TokenBalanceCard = () => {
   const { totalBalance } = useSendAccountBalances()
 
   return (
-    <XStack w={'100%'} zIndex={4}>
+    <XStack w={'100%'} zIndex={4} testID="token-balance-card">
       <YStack>
         <YStack jc={'center'} gap={'$6'} pb="$6">
           <TooltipGroup delay={{ open: 0, close: 1500 }}>
