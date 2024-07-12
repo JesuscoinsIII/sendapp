@@ -6,7 +6,8 @@ import { assert } from './assert'
 
 export function useProfileLookup(
   lookup_type: Database['public']['Enums']['lookup_type_enum'],
-  identifier: string
+  identifier: string,
+  enabled = true
 ): UseQueryResult<Functions<'profile_lookup'>[number], PostgrestError> {
   const supabase = useSupabase()
   return useQuery({
@@ -26,6 +27,6 @@ export function useProfileLookup(
       }
       return data
     },
-    enabled: !!lookup_type && !!identifier,
+    enabled: (!!lookup_type && !!identifier) || enabled,
   })
 }
