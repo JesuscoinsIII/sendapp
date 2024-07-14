@@ -540,6 +540,57 @@ export type Database = {
         }
         Relationships: []
       }
+      send_account_referral_bonuses: {
+        Row: {
+          amount: number
+          block_num: number
+          block_time: number
+          chain_id: number
+          event_id: string
+          id: number
+          ig_name: string
+          log_addr: string
+          log_idx: number
+          referred: string
+          referrer: string
+          src_name: string
+          tx_hash: string
+          tx_idx: number
+        }
+        Insert: {
+          amount: number
+          block_num: number
+          block_time: number
+          chain_id: number
+          event_id?: string
+          id?: number
+          ig_name: string
+          log_addr: string
+          log_idx: number
+          referred: string
+          referrer: string
+          src_name: string
+          tx_hash: string
+          tx_idx: number
+        }
+        Update: {
+          amount?: number
+          block_num?: number
+          block_time?: number
+          chain_id?: number
+          event_id?: string
+          id?: number
+          ig_name?: string
+          log_addr?: string
+          log_idx?: number
+          referred?: string
+          referrer?: string
+          src_name?: string
+          tx_hash?: string
+          tx_idx?: number
+        }
+        Relationships: []
+      }
       send_account_signing_key_added: {
         Row: {
           abi_idx: number

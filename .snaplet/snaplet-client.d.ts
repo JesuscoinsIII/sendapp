@@ -272,6 +272,25 @@ type Override = {
       abi_idx?: string;
     };
   }
+  send_account_referral_bonuses?: {
+    name?: string;
+    fields?: {
+      id?: string;
+      event_id?: string;
+      chain_id?: string;
+      block_num?: string;
+      block_time?: string;
+      tx_hash?: string;
+      tx_idx?: string;
+      log_idx?: string;
+      log_addr?: string;
+      referrer?: string;
+      referred?: string;
+      amount?: string;
+      ig_name?: string;
+      src_name?: string;
+    };
+  }
   send_account_signing_key_added?: {
     name?: string;
     fields?: {
@@ -652,6 +671,15 @@ export interface Fingerprint {
     logIdx?: FingerprintNumberField;
     value?: FingerprintNumberField;
     abiIdx?: FingerprintNumberField;
+  }
+  sendAccountReferralBonuses?: {
+    id?: FingerprintNumberField;
+    chainId?: FingerprintNumberField;
+    blockNum?: FingerprintNumberField;
+    blockTime?: FingerprintNumberField;
+    txIdx?: FingerprintNumberField;
+    logIdx?: FingerprintNumberField;
+    amount?: FingerprintNumberField;
   }
   sendAccountSigningKeyAddeds?: {
     chainId?: FingerprintNumberField;
