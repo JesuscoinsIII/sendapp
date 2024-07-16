@@ -273,7 +273,7 @@ const AddressSearchResultRow = ({ address }: { address: Address }) => {
               $theme-light={{ color: '$darkGrayTextField' }}
               $gtSm={{ fontSize: '$2' }}
             >
-              {gtMd ? address : shorten(address, 6, 6)}
+              {gtMd ? address : shorten(address, 5, 4)}
             </Text>
           </YStack>
         </Card>
